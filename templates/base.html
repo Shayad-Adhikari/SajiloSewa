@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Freelance Marketplace{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>MyMarketplace</h2>
+        <a href="/">Home</a>
+        <a href="/gigs">Browse Gigs</a>
+        <a href="/login">Login</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
